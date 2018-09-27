@@ -1,8 +1,21 @@
 * TODO A repo for metapackages
 ** Here goes the list and an example(-es?) of usage
+   #+BEGIN_SRC emacs-lisp
+     (use-package emrc-defaults
+       :ensure nil
+       :quelpa (emrc-defaults :repo "EmacsRuPub/emrc"
+                              :fetcher github
+                              :files ("emrc-defaults.el"))
+       :custom
+       (iqa-user-init-file (concat user-emacs-directory "README.org") "Edit README.org by default."))
+   #+END_SRC
+
 
 * Where to get good ideas
-  [[https://github.com/josteink/emacs-oob-reboot][Emacs OOB reboot]]
-  [[https://github.com/technomancy/better-defaults][Better defaults]]
-  [[https://github.com/hlissner/doom-emacs][Doom]]
-  [[https://github.com/syl20bnr/spacemacs/tree/master/layers][Spacemacs]]
+  - [[https://github.com/josteink/emacs-oob-reboot][Emacs OOB reboot]]
+
+  - [[https://github.com/technomancy/better-defaults][Better defaults]]
+
+  - [[https://github.com/hlissner/doom-emacs][Doom]]
+
+  - [[https://github.com/syl20bnr/spacemacs/tree/master/layers][Spacemacs]]
