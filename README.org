@@ -1,0 +1,8 @@
+* TODO A repo for metapackages
+** Here goes the list and an example(-es?) of usage
+
+* Where to get good ideas
+  [[https://github.com/josteink/emacs-oob-reboot][Emacs OOB reboot]]
+  [[https://github.com/technomancy/better-defaults][Better defaults]]
+  [[https://github.com/hlissner/doom-emacs][Doom]]
+  [[https://github.com/syl20bnr/spacemacs/tree/master/layers][Spacemacs]]
