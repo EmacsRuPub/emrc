@@ -110,6 +110,18 @@
   :config
   (exec-path-from-shell-initialize))
 
+(use-package isearch
+  :ensure nil
+  :bind
+  ;; TODO: maybe get a keybinding from global map
+  (:map isearch-mode-map
+        ("C-h" . isearch-delete-char)))
+
+(use-package mb-depth
+  :ensure nil
+  :config
+  (minibuffer-depth-indicate-mode 1))
+
 ;; Local Variables:
 ;; eval: (add-hook 'after-save-hook (lambda ()(org-babel-tangle)) nil t)
 ;; End:

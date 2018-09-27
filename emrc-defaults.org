@@ -148,7 +148,23 @@
       (exec-path-from-shell-initialize))
   #+END_SRC
 
-
+* Minibuffer setup
+  Use /C-h/ to kill a char before cursor in isearch-mode too
+  #+BEGIN_SRC emacs-lisp
+    (use-package isearch
+      :ensure nil
+      :bind
+      ;; TODO: maybe get a keybinding from global map
+      (:map isearch-mode-map
+            ("C-h" . isearch-delete-char)))
+  #+END_SRC
+  Indicate minibuffer depth
+  #+BEGIN_SRC emacs-lisp
+    (use-package mb-depth
+      :ensure nil
+      :config
+      (minibuffer-depth-indicate-mode 1))
+  #+END_SRC
 
 * Footer
   #+BEGIN_SRC emacs-lisp

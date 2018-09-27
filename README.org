@@ -55,6 +55,15 @@
        (iqa-user-init-file (concat user-emacs-directory "README.org") "Edit README.org by default."))
    #+END_SRC
 
+   Ivy completion
+   #+BEGIN_SRC emacs-lisp
+     (use-package emrc-completion-ivy
+       :ensure nil
+       :quelpa (emrc-completion-ivy :repo "EmacsRuPub/emrc"
+                              :fetcher github
+                              :files ("emrc-completion-ivy.el")))
+   #+END_SRC
+
 
 * Where to get good ideas
   - [[https://github.com/josteink/emacs-oob-reboot][Emacs OOB reboot]]
