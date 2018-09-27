@@ -45,6 +45,7 @@
    #+END_SRC
 
 ** Here goes the list and an example(-es?) of usage
+   [[file:emrc-defaults.org][emrc-default]]
    #+BEGIN_SRC emacs-lisp
      (use-package emrc-defaults
        :ensure nil
@@ -53,7 +54,7 @@
                               :files ("emrc-defaults.el")))
    #+END_SRC
 
-   Dired
+   [[file:emrc-dired.org][emrc-dired]]
    #+BEGIN_SRC emacs-lisp
      (use-package emrc-dired
        :ensure nil
@@ -63,7 +64,7 @@
    #+END_SRC
 
 
-   Ivy completion
+   [[file:emrc-completion-ivy.org][emrc-completion-ivy]]
    #+BEGIN_SRC emacs-lisp
      (use-package emrc-completion-ivy
        :ensure nil
