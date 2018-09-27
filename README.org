@@ -1,4 +1,40 @@
 * TODO A repo for metapackages
+
+** Prerequisites
+   By default, Emacs knows about [[https://elpa.gnu.org/][GNU ELPA]] only, add [[https://melpa.org][some]] [[https://orgmode.org/elpa.html][more]] repositories.
+   #+BEGIN_SRC emacs-lisp
+     (require 'package)
+     (setq package-archives
+           `(,@package-archives
+             ("melpa" . "https://melpa.org/packages/")
+             ;; ("marmalade" . "https://marmalade-repo.org/packages/")
+             ("org" . "https://orgmode.org/elpa/")
+             ;; ("user42" . "https://download.tuxfamily.org/user42/elpa/packages/")
+             ;; ("emacswiki" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/emacswiki/")
+             ;; ("sunrise" . "http://joseito.republika.pl/sunrise-commander/")
+             ))
+     (package-initialize)
+   #+END_SRC
+   Use-package can't install itself so we have to bootstrap it
+   #+BEGIN_SRC emacs-lisp
+     (setq package-enable-at-startup nil)
+
+     (unless (package-installed-p 'use-package)
+       (package-refresh-contents)
+       (package-install 'use-package))
+
+     (eval-when-compile
+       (require 'use-package))
+
+     (put 'use-package 'lisp-indent-function 1)
+     (setq use-package-always-ensure t)
+   #+END_SRC
+   Install [[https://framagit.org/steckerhalter/quelpa][Quelpa]], so we can install packages directly from their sources
+   #+BEGIN_SRC emacs-lisp
+     (use-package quelpa)
+     (use-package quelpa-use-package)
+   #+END_SRC
+
 ** Here goes the list and an example(-es?) of usage
    #+BEGIN_SRC emacs-lisp
      (use-package emrc-defaults
