@@ -1,4 +1,13 @@
+#+PROPERTY: header-args:emacs-lisp :tangle "init.el"
 * TODO A repo for metapackages
+** How to use
+   - tangle this file to init.el `M-x org-babel-tangle`
+   - edit the latter according to your needs
+   - test it with your Emacs installation, you can even run it from `M-x eshell`
+     #+BEGIN_SRC shell :results output silent
+       emacs -q -l init.el
+     #+END_SRC
+   - put it in your `~/.emacs.d/init.el` if everything is OK
 
 ** Prerequisites
    By default, Emacs knows about [[https://elpa.gnu.org/][GNU ELPA]] only, add [[https://melpa.org][some]] [[https://orgmode.org/elpa.html][more]] repositories.
