@@ -55,6 +55,16 @@
        (iqa-user-init-file (concat user-emacs-directory "README.org") "Edit README.org by default."))
    #+END_SRC
 
+   Dired
+   #+BEGIN_SRC emacs-lisp
+     (use-package emrc-dired
+       :ensure nil
+       :quelpa (emrc-dired :repo "EmacsRuPub/emrc"
+                              :fetcher github
+                              :files ("emrc-dired.el")))
+   #+END_SRC
+
+
    Ivy completion
    #+BEGIN_SRC emacs-lisp
      (use-package emrc-completion-ivy
