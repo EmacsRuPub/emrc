@@ -50,9 +50,7 @@
        :ensure nil
        :quelpa (emrc-defaults :repo "EmacsRuPub/emrc"
                               :fetcher github
-                              :files ("emrc-defaults.el"))
-       :custom
-       (iqa-user-init-file (concat user-emacs-directory "README.org") "Edit README.org by default."))
+                              :files ("emrc-defaults.el")))
    #+END_SRC
 
    Dired
@@ -60,8 +58,8 @@
      (use-package emrc-dired
        :ensure nil
        :quelpa (emrc-dired :repo "EmacsRuPub/emrc"
-                              :fetcher github
-                              :files ("emrc-dired.el")))
+                           :fetcher github
+                           :files ("emrc-dired.el")))
    #+END_SRC
 
 
